@@ -8,5 +8,5 @@
 10.times do
   Movie.create!(title: Faker::Movie.title,
                 overview: Faker::Movie.quote,
-                rating: Faker::Number.between(from: 0.0..10.0))
+                rating: Faker::Number.between(from: 0.0, to: 10.0))
 end
