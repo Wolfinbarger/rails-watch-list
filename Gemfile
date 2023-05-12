@@ -53,6 +53,7 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
 gem "faker", "~> 3.2.0"
 gem "dotenv-rails"
+gem 'cloudinary', '~> 1.16.0'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
