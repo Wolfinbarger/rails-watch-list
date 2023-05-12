@@ -1,9 +1,8 @@
  <%= render 'components/nav' %>
 <h2> <%= @list.name.upcase %></h2>
-<% @list.movies.each do |movie| %>
-  <div class="cards">
+<div class="cards">
+  <% @list.movies.each do |movie| %>
     <div class="card-pick">
-      <img src="image.jpg" alt="">
       <div class="card-pick-info">
         <h2><%= movie.title %></h2>
         <p><%= movie.overview %></p>
