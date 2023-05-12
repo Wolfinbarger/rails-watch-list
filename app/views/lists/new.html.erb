@@ -1,8 +1,8 @@
  <%= render 'components/nav' %>
 <div class="form">
   <%= simple_form_for @list do |f| %>
-    <%= f.input :photo, as: :file %>
     <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit 'Submit' %>
   <% end %>
 </div>
