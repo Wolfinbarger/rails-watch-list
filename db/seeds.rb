@@ -17,5 +17,5 @@ Bookmark.destroy_all
 end
 
 (1..7).times do
-  Bookmark.create!(comment: Faker::Quote.yoda, list_id: (1..10), movie_id: (1..10))
+  Bookmark.create!(comment: Faker::Quote.yoda, list_id: rand(1..10), movie_id: rand(1..10))
 end
