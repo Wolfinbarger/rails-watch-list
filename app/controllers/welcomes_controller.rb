@@ -1,5 +1,5 @@
 class WelcomesController < ApplicationController
   def home
-    @lists = List.all
+    # @lists = List.all
   end
 end
