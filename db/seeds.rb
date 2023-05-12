@@ -15,3 +15,7 @@ Bookmark.destroy_all
                 rating: Faker::Number.between(from: 0.0, to: 10.0))
   List.create!(name: Faker::CryptoCoin.coin_name)
 end
+
+(1..7).times do
+  Bookmark.create!(comment: Faker::Quote.yoda, list_id: (1..10), movie_id: (1..10))
+end
