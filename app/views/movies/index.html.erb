@@ -1,10 +1,12 @@
+ <%= render 'components/nav' %>
 <h1>movies</h1>
-
-<% @movies.each do |movie| %>
-  <div class="card-hello">
-    <div class="card-hello-info">
-      <h2> <%= movie.title %></h2>
-      <p> <%= movie.overview %></p>
+<div class="cards">
+  <% @movies.each do |movie| %>
+    <div class="card-hello">
+      <div class="card-hello-info">
+        <h2> <%= movie.title %></h2>
+        <p> <%= movie.overview %></p>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

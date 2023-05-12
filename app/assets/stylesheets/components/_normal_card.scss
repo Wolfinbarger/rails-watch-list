@@ -1,0 +1,45 @@
+/*Card diapo*/
+.card-diapo {
+  /*fixed*/
+  position: relative;
+  /*customizable*/
+  height: 300px;
+  width: 100%;
+  max-width: 500px;
+}
+.card-diapo-img {
+  /*fixed*/
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  opacity: 0;
+  /*customizable*/
+  border-radius: 16px;
+  transition: opacity 3s ease-out;
+}
+.card-diapo-img.show {
+  /*fixed*/
+  opacity: 1;
+}
+.card-diapo-text {
+  /*fixed*/
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*customizable*/
+  color: rgb(240, 240, 240);
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.card-diapo-text h2 {
+  /*fixed*/
+  margin: 0;
+  /*customizable*/
+  font-size: 32px;
+}
+.card-diapo-text p {
+  /*fixed*/
+  margin: 0;
+}

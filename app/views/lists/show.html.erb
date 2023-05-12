@@ -1,12 +1,18 @@
-<div class="item-drawer">
-  <div class="item-drawer-content">
-    <h2> <%= @list.name %></h2>
-  </div>
-  <div class="item-drawer-button">
-    <i class="fas fa-ellipsis-v"></i>
-  </div>
-  <div class="item-drawer-settings">
-    <a href="#"><i class="fas fa-edit"></i></a>
-    <a href="#"><i class="fas fa-trash"></i></a>
-  </div>
-  </div>
+ <%= render 'components/nav' %>
+<h2> <%= @list.name.upcase %></h2>
+<% @list.movies.each do |movie| %>
+  <div class="cards">
+    <div class="card-pick">
+      <img src="image.jpg" alt="">
+      <div class="card-pick-info">
+        <h2><%= movie.title %></h2>
+        <p><%= movie.overview %></p>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to new_list_bookmark_path(@list) do  %>
+    <div class="card-pick">
+      <i class="fa-solid fa-plus fa-5x"></i>
+    </div>
+  <% end %>
+</div>

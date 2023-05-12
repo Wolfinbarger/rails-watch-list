@@ -1,4 +1,7 @@
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-  <%= f.submit 'Submit' %>
-<% end %>
+ <%= render 'components/nav' %>
+<div class="form">
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.submit 'Submit' %>
+  <% end %>
+</div>
