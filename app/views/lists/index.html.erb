@@ -3,7 +3,7 @@
 <div class="cards">
   <% @lists.each do |list| %>
     <%= link_to list_path(list) do  %>
-      <div class="card-pick" style=" background-image: url(<%=cl_image_path(list.photo.key) %>")>
+      <div class="card-pick" style=" background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : "https://res.cloudinary.com/dsgm6btt5/image/upload/v1683872992/shubham-dhage-WtolM5hsj14-unsplash_osxtrb.jpg" %>")>
         <div class="card-pick-info">
           <h2> <%= list.name %></h2>
         </div>
