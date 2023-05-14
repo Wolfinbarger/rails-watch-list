@@ -9,6 +9,15 @@ class MoviesController < ApplicationController
     @movies = fetch_top_movies
   end
 
+  def show_tmdb
+    @lists = List.all
+    @movie = params[:movie]
+  end
+
+  def create
+    @movie = Movie.create(movie_params)
+  end
+
   private
 
   def fetch_top_movies
@@ -25,5 +34,10 @@ class MoviesController < ApplicationController
                   rating: movie['vote_average'] }
     end
     movies
+  end
+
+  def movie_params
+
+    require.permit(:title, :rating, :overview, :poster_url)
   end
 end

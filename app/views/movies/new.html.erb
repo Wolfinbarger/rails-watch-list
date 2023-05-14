@@ -1,0 +1,8 @@
+<%= render 'components/nav' %>
+<div class="form">
+  <%= simple_form_for @movie do |f| %>
+    <% p @movie %>
+    <%= f.input :title%>
+    <%= f.submit 'Submit' %>
+  <% end %>
+</div>

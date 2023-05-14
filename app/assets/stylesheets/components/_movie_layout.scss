@@ -1,0 +1,49 @@
+.image {
+  width: 500px;
+  height: 750px;
+}
+
+.movie-title-rating {
+  display: flex;
+  align-items: baseline;
+}
+
+.movie-title-rating h2 {
+  margin-right: 8px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.button-list {
+  height: 50px;
+  border-radius: 4px;
+  color: whitesmoke;
+  background-color: rgba($color: #000000, $alpha: 1.0);
+  border-style: solid;
+  border-color: whitesmoke;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+}
+
+.button-list:hover {
+  border-color: black;
+}
+
+.movie-info {
+  margin-left: 16px;
+}
+
+.movie-info > p {
+  padding: 32px;
+}
+
+
+.movie-layout {
+  display: flex;
+}

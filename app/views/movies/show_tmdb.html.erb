@@ -1,0 +1,19 @@
+<%= render 'components/nav' %>
+<div class="container">
+  <div class="movie-layout">
+    <%= image_tag params[:poster_url], alt: "text", class: "image" %>
+    <div class="movie-info">
+      <div class="info-row">
+        <div class="movie-title-rating">
+          <h2>  <%= params[:title] %> </h2>
+          <p> <i class="fa-solid fa-star" style="color: #eeb417;"></i> <%= params[:rating] %> </p>
+        </div>
+        <%= link_to movies_path do  %>
+          <input type="submit" value="Add to Watchlist" class="button-list">
+        <% end %>
+      </div>
+      <h3> Overview:</h3>
+      <p> <%= params[:overview] %> </p>
+    </div>
+  </div>
+</div>

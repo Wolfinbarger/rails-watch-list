@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root 'welcomes#home'
   resources :movies, only: %i[index] do
     collection do
-      get :top
+      get :top, :show_tmdb
     end
   end
 

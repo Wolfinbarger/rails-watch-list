@@ -1,0 +1,29 @@
+body {
+  background-color: black;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+.container {
+  align-items: center;
+  position: relative;
+}
+.form {
+  border-style: solid;
+  border-color: whitesmoke;
+  background-color: rgba(50, 50, 50, 0.3);
+  color: whitesmoke;
+  text-align: center;
+  radius: 8px;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.info {
+  margin-bottom: 8px;
+}
