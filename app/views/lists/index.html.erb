@@ -1,18 +1,22 @@
 <%= render 'components/nav' %>
 <h1>Lists</h1>
-<div class="cards">
-  <% @lists.each do |list| %>
-    <%= link_to list_path(list) do  %>
-      <div class="card-pick" style=" background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : "https://res.cloudinary.com/dsgm6btt5/image/upload/v1683872992/shubham-dhage-WtolM5hsj14-unsplash_osxtrb.jpg" %>")>
-        <div class="card-pick-info">
-          <h2> <%= list.name %></h2>
+<div class="container">
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <%= link_to list_path(list), class:"card-link" do  %>
+        <div class="card-pick">
+          <%= image_tag list.photo.attached? ? cl_image_path(list.photo.key) : "https://www.freepnglogos.com/uploads/film-reel-png/film-reel-png-film-strip-border-transparent-film-strip-border-5.png", class: "image" %>
+          <img src="url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : "https://res.cloudinary.com/dsgm6btt5/image/upload/v1683872992/shubham-dhage-WtolM5hsj14-unsplash_osxtrb.jpg" %>)" alt="">
+          <div class="card-pick-info">
+            <h2> <%= list.name %></h2>
+          </div>
         </div>
+      <% end %>
+    <% end %>
+    <%= link_to new_list_path, class:"nav-link" do  %>
+      <div class="card-pick">
+        <i class="fa-solid fa-plus fa-5x" style="color: #29a0db;"></i>
       </div>
     <% end %>
-  <% end %>
-  <%= link_to new_list_path do  %>
-    <div class="card-pick">
-      <i class="fa-solid fa-plus fa-5x"></i>
-    </div>
-  <% end %>
+  </div>
 </div>

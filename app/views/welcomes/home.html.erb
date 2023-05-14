@@ -3,5 +3,24 @@
 <h2>Movies</h2>
 <%= render 'components/carousel' %>
 <h2>Lists</h2>
-<%= render 'components/carousel_list' %>
+<div class="container">
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <%= link_to list_path(list), class:"card-link" do  %>
+        <div class="card-pick")>
+          <%= image_tag list.photo.attached? ? cl_image_path(list.photo.key) : "https://res.cloudinary.com/dsgm6btt5/image/upload/v1683872992/shubham-dhage-WtolM5hsj14-unsplash_osxtrb.jpg", class: "image" %>
+          <img src="url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : "https://res.cloudinary.com/dsgm6btt5/image/upload/v1683872992/shubham-dhage-WtolM5hsj14-unsplash_osxtrb.jpg" %>)" alt="">
+          <div class="card-pick-info">
+            <h2> <%= list.name %></h2>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+    <%= link_to new_list_path, class:"nav-link" do  %>
+      <div class="card-pick">
+        <i class="fa-solid fa-plus fa-5x" style="color: #29a0db;"></i>
+      </div>
+    <% end %>
+  </div>
+</div>
 <%= render 'components/footer' %>

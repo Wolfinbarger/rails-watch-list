@@ -6,8 +6,14 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root "welcomes#home"
-  resources :lists, only: %i[index new show create] do
+  root 'welcomes#home'
+  resources :movies, only: %i[index] do
+    collection do
+      get :top
+    end
+  end
+
+  resources :lists, only: %i[index new show create destroy] do
     resources :bookmarks, only: %i[new create]
   end
   resources :bookmarks, only: :destroy
