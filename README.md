@@ -1,24 +1,60 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 📚 Watchlist
 
-Things you may want to cover:
+Watchlist is an web application that allows for creation of movie lists with the movie information taken from TMDB.
 
-* Ruby version
+<details>
+<summary>Table of Contents</summary>
 
-* System dependencies
+- [📚 OniGiri](#-watchlist)
+  - [Getting Started](#getting-started)
+    - [Setup](#setup)
+    - [ENV Variables](#env-variables)
+    - [DB Setup](#db-setup)
+    - [Run a server](#run-a-server)
+  - [Built With](#built-with)
+  - [Acknowledgements](#acknowledgements)
+  - [License](#license)
+</details>
 
-* Configuration
+## Getting Started
+### Setup
 
-* Database creation
+Install gems
+```
+bundle install
+```
+Install JS packages
+```
+yarn install
+```
 
-* Database initialization
+### ENV Variables
+Create `.env` file
+```
+touch .env
+```
+Inside `.env`, set these variables. For any APIs, see group Slack channel.
+```
+API_KEY=your_own_tmdb_url_key
+```
 
-* How to run the test suite
+### DB Setup
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Run a server
+```
+rails s
+```
+## Built With
+- [Rails 7](https://guides.rubyonrails.org/) - Backend / Front-end
+- [Stimulus JS](https://stimulus.hotwired.dev/) - Front-end JS
+- [Heroku](https://heroku.com/) - Deployment
+- [Bootstrap](https://getbootstrap.com/) — Styling
 
-* Deployment instructions
 
-* ...
+## License
